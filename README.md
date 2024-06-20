@@ -6,10 +6,28 @@ Alat IoT Monitoring Tiang Listrik kami adalah solusi canggih dan terintegrasi ya
 
 ### instalasi
 
-pembantu utama
+#### pembantu utama
 
 ```bash
 pnpm dlx shadcn-ui@latest init
 pnpm i tailwind-merge
 
+```
+
+#### prisma
+
+```
+pnpm install prisma @prisma/client @prisma/studio
+pnpm add -g dotenv-cli
+npx prisma init
+```
+
+##### runnig prisma
+
+```
+npx prisma generate
+npx prisma db push
+npx prisma studio
+
+"monitor": "dotenv -e .env.development -- npx prisma studio"
 ```
