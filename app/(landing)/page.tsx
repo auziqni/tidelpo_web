@@ -31,7 +31,7 @@ const cardLayanan: CardLayananProps[] = [
 
 export default function Home() {
   return (
-    <main className="relative ">
+    <div className="relative ">
       <div id="hero" className="h-screen relative">
         <div className="absolute bottom-1/2 z-10 pl-20 text-white">
           <h3 className="text-2xl">Cermati Alur Dari Hulu Ke Hilir</h3>
@@ -97,7 +97,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
 

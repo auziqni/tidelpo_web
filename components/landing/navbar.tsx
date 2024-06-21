@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
@@ -31,10 +32,12 @@ export default function Navbar() {
             <a href="#daftar">Daftar</a>
           </li>
           <li>
-            <button className="text-black py-3 px-7 bg-accentyellow rounded-sm">
-              {" "}
+            <Link
+              href={"/dashboard"}
+              className="text-black py-3 px-7 bg-accentyellow rounded-sm"
+            >
               Masuk
-            </button>
+            </Link>
           </li>
         </ul>
       </div>
