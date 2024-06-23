@@ -1,9 +1,12 @@
+import Map from "@/components/dashboard/map";
 import React from "react";
+import datamock from "@/lib/mock/alatMock.json";
 
 export default function Dashboard() {
   return (
-    <div className="relative flex flex-col  bg-green-500">
-      <div className="w-full bg-red-50">sdfasdfads</div>
+    <div className="relative">
+      <Map dataTiang={datamock} />
+      {/* <div className="h-full w-full bg-red-200"></div> */}
     </div>
   );
 }

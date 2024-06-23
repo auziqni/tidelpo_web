@@ -31,3 +31,17 @@ npx prisma studio
 
 "monitor": "dotenv -e .env.development -- npx prisma studio"
 ```
+
+####
+
+addon shadcn
+
+```
+pnpm dlx shadcn-ui@latest add button
+pnpm dlx shadcn-ui@latest add sheet
+
+pnpm dlx shadcn-ui@latest add command popover
+
+
+
+```

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 2,
+    "deviceCode": "8yrhfno",
+    "nama": "tiang2",
+    "lat": -5.358543,
+    "lng": 105.314862,
+    "sensSoil": 0.21,
+    "sensPressure": 0.22,
+    "sensTilt": 0.23,
+    "statusTiang": "aman",
+    "timeStamp": "2024-06-20T09:57:45.221Z"
+  },
+  {
+    "id": 3,
+    "deviceCode": "9eufjcz",
+    "nama": "tiang3",
+    "lat": -5.359269,
+    "lng": 105.314878,
+    "sensSoil": 0.31,
+    "sensPressure": 0.32,
+    "sensTilt": 0.33,
+    "statusTiang": "waspada",
+    "timeStamp": "2024-06-20T09:57:45.221Z"
+  },
+  {
+    "id": 4,
+    "deviceCode": "2isdjoi",
+    "nama": "tiang4",
+    "lat": -5.359969,
+    "lng": 105.314873,
+    "sensSoil": 0.41,
+    "sensPressure": 0.42,
+    "sensTilt": 0.43,
+    "statusTiang": "bahaya",
+    "timeStamp": "2024-06-20T09:57:45.221Z"
+  }
+]
