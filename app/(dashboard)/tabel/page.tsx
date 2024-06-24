@@ -1,8 +1,3 @@
-// import TableMinimal from "@/components/dashboard/tableMinimal";
-// import TableDownload from "@/components/dashboard/tableDownload";
-// import React from "react";
-// import ExampleWithLocalizationProvider from "@/components/dashboard/tableAdvanced";
-import TableMinimalMe from "@/components/dashboard/tableMinimalMe";
 import TableTiang from "@/components/dashboard/tableTiang";
 
 // import Table from "@/components/dashboard/table";

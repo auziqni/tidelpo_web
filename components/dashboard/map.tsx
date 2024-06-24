@@ -34,10 +34,10 @@ import {
 
 export default function Map({
   className,
-  dataTiang,
+  dataMap,
 }: {
   className?: string;
-  dataTiang: DataMap[];
+  dataMap: DataMap[];
 }) {
   // const [myLocation, setMyLocation] = useState<MyLocation | null>(null);
   const [selectedPole, setSelectedPole] = useState<DataMap | null>(null);
@@ -89,7 +89,7 @@ export default function Map({
               className="w-[200px] justify-between"
             >
               {valueSearched
-                ? dataTiang.find((tiang) => tiang.nama === valueSearched)?.nama
+                ? dataMap.find((tiang) => tiang.nama === valueSearched)?.nama
                 : "Cari Tiang"}
               <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
             </Button>
@@ -100,7 +100,7 @@ export default function Map({
               <CommandEmpty>Tiang Tidak Ada.</CommandEmpty>
               <CommandGroup>
                 <CommandList>
-                  {dataTiang.map((tiang) => (
+                  {dataMap.map((tiang) => (
                     <CommandItem
                       key={tiang.nama}
                       value={tiang.nama}
@@ -142,7 +142,7 @@ export default function Map({
         zoom={17}
         onLoad={onMapLoad}
       >
-        {dataTiang.map((tiang) => (
+        {dataMap.map((tiang) => (
           <Marker
             key={tiang.id}
             position={{ lat: tiang.lat, lng: tiang.lng }}
