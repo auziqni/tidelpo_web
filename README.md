@@ -55,4 +55,11 @@ pnpm i @react-google-maps/api
 ```
 pnpm add material-react-table @mui/material @mui/x-date-pickers @mui/icons-material @emotion/react @emotion/styled
 pnpm i export-to-csv
+
+```
+
+#### auth clerk
+
+```
+pnpnpm add @clerk/nextjs
 ```

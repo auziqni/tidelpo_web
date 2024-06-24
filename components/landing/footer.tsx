@@ -44,7 +44,7 @@ export default function Footer() {
         ))}
       </ul>
       <div className="mt-8 items-center justify-between sm:flex">
-        <div className="mt-4 sm:mt-0">
+        <div className="mt-4 sm:mt-0 text-slate-400">
           2024 All rights reserved &copy; Tidelpo |{" "}
           <a
             href="https://www.teknisee.com/"

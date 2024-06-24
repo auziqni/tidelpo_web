@@ -29,11 +29,11 @@ export default function Navbar() {
             <a href="#hubungi">Hubungi Kami</a>
           </li>
           <li>
-            <a href="#daftar">Daftar</a>
+            <a href="/sign-up">Daftar</a>
           </li>
           <li>
             <Link
-              href={"/dashboard"}
+              href={"/sign-in"}
               className="text-black py-3 px-7 bg-accentyellow rounded-sm"
             >
               Masuk

@@ -1,5 +1,5 @@
 "use client";
-// import { UserButton } from "@clerk/nextjs";
+import { UserButton } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { MobileSidebar } from "@/components/dashboard/sideBarMobbile";
@@ -12,10 +12,11 @@ const Navbar = () => {
   // bg-[#E4EFE7]
   return (
     <div className="sticky flex top-0 justify-between z-20 h-16 p-4 shadow-lg bg-white ">
-      {/* <MobileSidebar /> */}
+      <div className="h-5 w-5 bg-white"></div>
       <h1>{getPageDecription(pathName)}</h1>
-      {/* <MobileSidebar isPro={isPro} apiLimitCount={apiLimitCount} /> */}
-      <div className="">{/* <UserButton afterSignOutUrl="/" /> */}</div>
+      <div className="">
+        <UserButton afterSignOutUrl="/" />
+      </div>
     </div>
   );
 };
@@ -26,11 +27,15 @@ function getPageDecription(path: string) {
   switch (path) {
     case "/":
       return "Home";
+    case "/dashboard":
+      return "Dashboard";
     case "/tabel":
       return "Tabel";
+    case "/tabel/[code]":
+      return "Detail Tabel";
     case "/setting":
       return "Setting";
     default:
-      return "Dashboard";
+      return "";
   }
 }
