@@ -1,6 +1,7 @@
 import TableSensor from "@/components/dashboard/tableSensor";
 // import { dataSensor } from "@/lib/mock/mockSensor";
 import { PrismaClient } from "@prisma/client";
+import { Suspense } from "react";
 const prisma = new PrismaClient();
 
 async function getDataDevice(code: string) {
@@ -31,7 +32,9 @@ export default async function Page({ params }: { params: { code: string } }) {
   // const data = dataSensor.filter((sensor) => sensor.deviceCode === params.code);
   return (
     <div className="  w-full  p-5">
-      <TableSensor data={data} />
+      <Suspense fallback={<div>Loading Table...</div>}>
+        <TableSensor data={data} />
+      </Suspense>
     </div>
   );
 }

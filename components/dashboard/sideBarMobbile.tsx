@@ -22,16 +22,12 @@ export const MobileSidebar = () => {
     <div>
       <Sheet>
         <SheetTrigger>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="sm:block md:hidden lg:hidden"
-          >
+          <Button variant="ghost" size="icon" className="sm:block lg:hidden">
             <Menu />
           </Button>
         </SheetTrigger>
         <SheetContent side="left" className="p-0">
-          <Sidebar />
+          <Sidebar className="w-full" />
         </SheetContent>
       </Sheet>
     </div>

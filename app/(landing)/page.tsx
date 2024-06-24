@@ -46,6 +46,7 @@ export default function Home() {
           alt="Next.js logo"
           fill
           style={{ objectFit: "cover" }}
+          priority
           className=""
         />
       </div>
