@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
-
-const inter = Inter({ subsets: ["latin"] });
+import { inter, grenze, overlock, slackey } from "@/styles/fonts";
+import { twMerge } from "tailwind-merge";
 
 export const metadata: Metadata = {
   title: "Tidelpo",
@@ -18,7 +17,17 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={inter.className}> {children}</body>
+        <body
+          className={twMerge(
+            inter.className,
+            grenze.variable,
+            overlock.variable,
+            slackey.variable
+          )}
+        >
+          {" "}
+          {children}
+        </body>
       </html>
     </ClerkProvider>
   );

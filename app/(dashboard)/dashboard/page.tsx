@@ -27,7 +27,7 @@ async function getTiang() {
   });
 
   const dataPenyesuaian = tiang.map((item, index) => ({
-    id: index + 1,
+    id: Number(item.id),
     deviceCode: item.deviceCode,
     nama: item.nama,
     lat: item.lat,

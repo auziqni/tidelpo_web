@@ -79,6 +79,12 @@ const config = {
       backgroundImage: {
         "hero-pattern": "url('/hero.jpg')",
       },
+
+      fontFamily: {
+        grenze: ["var(--font-grenze)"],
+        overlock: ["var(--font-overlock)"],
+        slackey: ["var(--font-slackey)"],
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
