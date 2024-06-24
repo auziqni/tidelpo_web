@@ -3,10 +3,34 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { inter, grenze, overlock, slackey } from "@/styles/fonts";
 import { twMerge } from "tailwind-merge";
+import dataseo from "@/content/seo.json";
 
 export const metadata: Metadata = {
-  title: "Tidelpo",
-  description: "Alat Mnitoring Tiang Listrik",
+  title: dataseo.title,
+  description: dataseo.description,
+  generator: dataseo.generator,
+  applicationName: dataseo.applicationName,
+  authors: dataseo.authors,
+  creator: dataseo.creator,
+  publisher: dataseo.publisher,
+  referrer: "origin-when-cross-origin",
+  keywords: dataseo.keywords,
+  openGraph: {
+    title: dataseo.title,
+    url: dataseo.url,
+    type: "website",
+    locale: dataseo.locale,
+    siteName: dataseo.title,
+    description: dataseo.description,
+    images: [
+      {
+        url: dataseo.url + dataseo.logo,
+        width: 1200,
+        height: 630,
+        alt: "LogoTidelpo",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
