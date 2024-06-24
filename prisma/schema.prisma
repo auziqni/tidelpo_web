@@ -16,7 +16,7 @@ datasource db {
 
 model Device {
   id        String   @id @default(cuid())
-  device_code String   @unique
+  deviceCode String   @unique
   nama        String
   lat         Float
   lng         Float
@@ -25,13 +25,13 @@ model Device {
 
 model Sensor {
   id          Int     @id @default(autoincrement())
-  device_code String
-  status_tiang Status_tiang @default(aman)
-  sens_soil     Float
-  sens_pressure     Float
-  sens_tilt     Float
-  timestamp   DateTime @default(now())
-  device      Device  @relation(fields: [device_code], references: [device_code])
+  deviceCode String
+  statusTiang Status_tiang @default(aman)
+  sensSoil     Float
+  sensPressure     Float
+  sensTilt     Float
+  timeTtamp   DateTime @default(now())
+  device      Device  @relation(fields: [deviceCode], references: [deviceCode])
 }
 
 enum Status_tiang{

@@ -32,9 +32,7 @@ npx prisma studio
 "monitor": "dotenv -e .env.development -- npx prisma studio"
 ```
 
-####
-
-addon shadcn
+#### addon shadcn
 
 ```
 pnpm dlx shadcn-ui@latest add button
@@ -44,4 +42,17 @@ pnpm dlx shadcn-ui@latest add command popover
 
 
 
+```
+
+#### map
+
+```
+pnpm i @react-google-maps/api
+```
+
+#### table
+
+```
+pnpm add material-react-table @mui/material @mui/x-date-pickers @mui/icons-material @emotion/react @emotion/styled
+pnpm i export-to-csv
 ```

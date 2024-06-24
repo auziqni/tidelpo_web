@@ -35,7 +35,7 @@ export const Sidebar = () => {
   return (
     <div
       id="sidebar"
-      className="sticky top-0 h-screen w-60 bg-black flex flex-col items-center gap-3"
+      className="sticky top-0 h-screen w-60 z-10 bg-black flex flex-col items-center gap-3"
     >
       <div
         id="sidebar-header"
