@@ -11,40 +11,85 @@ import { mkConfig, generateCsv, download } from "export-to-csv"; //or use your l
 //   import { data, type Person } from './makeData';
 // import React from "react";
 import { dataTiang } from "@/lib/mock/mockTiang";
+import { dataSensor } from "@/lib/mock/mockSensor";
 import Link from "next/link";
+import { twMerge } from "tailwind-merge";
+import { ReactNode } from "react";
 
-export default function TableTiang() {
-  const data = dataTiang;
+export default function TableSensor({ data }: { data: DataSensor[] }) {
   // create  column initial
-  const columnHelper = createMRTColumnHelper<DataTiang>();
+  const columnHelper = createMRTColumnHelper<DataSensor>();
 
+  const formatToIndonesiaTime = (isoString: string) => {
+    const date = new Date(isoString);
+    const options: Intl.DateTimeFormatOptions = {
+      timeZone: "Asia/Jakarta", // WIB (UTC+7)
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    };
+    const waktu: string = new Intl.DateTimeFormat("id-ID", options).format(
+      date
+    );
+
+    return waktu;
+  };
+
+  const getbgColor = (status: ReactNode) => {
+    switch (status) {
+      case "aman":
+        return "bg-aman text-white";
+      case "waspada":
+        return "bg-waspada text-white";
+      case "bahaya":
+        return "bg-bahaya text-white";
+
+      default:
+        return "bg-black text-white";
+    }
+  };
   const columns = [
     columnHelper.accessor("id", {
       header: "ID",
       size: 10,
     }),
-    columnHelper.accessor("nama", {
-      header: "Nama Tiang",
+    columnHelper.accessor("timeStamp", {
+      header: "Waktu Pengukuran",
       size: 120,
-      Cell: ({ renderedCellValue, row }) => (
-        <Link href={`/tabel/${row.original.deviceCode}`} className="">
-          <Button className=" w-16 text-purple-800 bg-white hover:bg-purple-800 hover:text-white ">
-            {renderedCellValue}
-          </Button>
-        </Link>
+      Cell: ({ row }) => formatToIndonesiaTime(row.original.timeStamp),
+    }),
+    columnHelper.accessor("sensPressure", {
+      header: "Tekanan Udara",
+      size: 200,
+      muiTableBodyCellProps: {
+        align: "center",
+      },
+    }),
+    columnHelper.accessor("sensSoil", {
+      header: "Kelembaban Tanah",
+      size: 200,
+      muiTableBodyCellProps: {
+        align: "center",
+      },
+    }),
+    columnHelper.accessor("sensTilt", {
+      header: "Kemiringan Tiang",
+      size: 200,
+      muiTableBodyCellProps: {
+        align: "center",
+      },
+    }),
+    columnHelper.accessor("statusTiang", {
+      header: "Status Tiang",
+      size: 150,
+      Cell: ({ renderedCellValue }) => (
+        <Button className={twMerge(" w-20", getbgColor(renderedCellValue))}>
+          {renderedCellValue}
+        </Button>
       ),
-    }),
-    columnHelper.accessor("deviceCode", {
-      header: "Kode Alat",
-      size: 120,
-    }),
-    columnHelper.accessor("lat", {
-      header: "Latitude",
-      size: 200,
-    }),
-    columnHelper.accessor("lng", {
-      header: "Longitude",
-      size: 200,
     }),
   ];
 
@@ -67,7 +112,7 @@ export default function TableTiang() {
     filename: `Data Tiang ${formatDate(new Date())}`,
   });
 
-  const handleExportRows = (rows: MRT_Row<DataTiang>[]) => {
+  const handleExportRows = (rows: MRT_Row<DataSensor>[]) => {
     const rowData = rows.map((row) => row.original);
     const csv = generateCsv(csvConfig)(rowData);
     download(csvConfig)(csv);

@@ -1,4 +1,4 @@
-export const sensorData: DataSensor[] = [
+export const dataSensor: DataSensor[] = [
   {
     id: 1,
     deviceCode: "2gsfbdf",
@@ -11,7 +11,7 @@ export const sensorData: DataSensor[] = [
   {
     id: 2,
     deviceCode: "2gsfbdf",
-    statusTiang: "aman",
+    statusTiang: "waspada",
     sensSoil: 21.8,
     sensPressure: 1013.4,
     sensTilt: 0.6,
@@ -20,7 +20,7 @@ export const sensorData: DataSensor[] = [
   {
     id: 3,
     deviceCode: "2gsfbdf",
-    statusTiang: "aman",
+    statusTiang: "bahaya",
     sensSoil: 22.0,
     sensPressure: 1013.5,
     sensTilt: 0.4,

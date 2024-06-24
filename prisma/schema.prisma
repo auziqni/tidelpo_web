@@ -30,7 +30,7 @@ model Sensor {
   sensSoil     Float
   sensPressure     Float
   sensTilt     Float
-  timeTtamp   DateTime @default(now())
+  timeStamp   DateTime @default(now())
   device      Device  @relation(fields: [deviceCode], references: [deviceCode])
 }
 
