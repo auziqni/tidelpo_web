@@ -12,25 +12,9 @@ import { mkConfig, generateCsv, download } from "export-to-csv"; //or use your l
 // import React from "react";
 import { dataTiang } from "@/lib/mock/mockTiang";
 import Link from "next/link";
-import { PrismaClient } from "@prisma/client";
-const prisma = new PrismaClient();
 
-async function getDataDevice() {
-  const dataDevice = await prisma.device.findMany();
-
-  const dataPenyesuaian = dataDevice.map((item, index) => ({
-    id: index + 1,
-    deviceCode: item.deviceCode,
-    nama: item.nama,
-    lat: item.lat,
-    lng: item.lng,
-  }));
-
-  return dataPenyesuaian;
-}
-
-export default function TableTiang() {
-  const data = dataTiang;
+export default function TableTiang({ data }: { data: DataTiang[] }) {
+  // const data = dataTiang;
   // create  column initial
   const columnHelper = createMRTColumnHelper<DataTiang>();
 

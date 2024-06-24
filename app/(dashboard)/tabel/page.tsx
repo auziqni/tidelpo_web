@@ -1,18 +1,31 @@
 import TableTiang from "@/components/dashboard/tableTiang";
 
 // import Table from "@/components/dashboard/table";
+import { PrismaClient } from "@prisma/client";
+const prisma = new PrismaClient();
 
-export default function Tabel() {
+async function getDataDevice() {
+  const dataDevice = await prisma.device.findMany({
+    orderBy: {
+      id: "asc",
+    },
+  });
+
+  const dataPenyesuaian = dataDevice.map((item, index) => ({
+    id: index + 1,
+    deviceCode: item.deviceCode,
+    nama: item.nama,
+    lat: item.lat,
+    lng: item.lng,
+  }));
+
+  return dataPenyesuaian;
+}
+export default async function Tabel() {
+  const data: DataTiang[] = await getDataDevice();
   return (
     <div className="relative  w-full bg-purple-50 p-5">
-      {/* <div className="h-screen w-full bg-red-400"></div>
-      <div className="h-screen w-full bg-green-400"></div> */}
-
-      {/* <TableMinimal /> */}
-      {/* <TableDownload /> */}
-      {/* <ExampleWithLocalizationProvider /> */}
-      {/* <Table dataTiang={datarrr} /> */}
-      <TableTiang />
+      <TableTiang data={data} />
     </div>
   );
 }
