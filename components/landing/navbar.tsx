@@ -18,7 +18,7 @@ export default function Navbar() {
       </div>
 
       <div>
-        <ul className=" text-white flex items-center gap-4">
+        <ul className=" text-white flex items-center gap-4 font-grenze text-xl">
           <li>
             <a href="#beranda">Beranda</a>
           </li>
@@ -26,7 +26,7 @@ export default function Navbar() {
             <a href="#layanan">Layanan</a>
           </li>
           <li>
-            <a href="#hubungi">Hubungi Kami</a>
+            <a href="#tentang">Hubungi Kami</a>
           </li>
           <li>
             <a href="/sign-up">Daftar</a>

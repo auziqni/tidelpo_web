@@ -6,6 +6,7 @@ import { MapIcon, LayoutDashboard, Settings } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
+import { twMerge } from "tailwind-merge";
 // import { FreeCounter } from "@/components/free-counter";
 
 const routes = [
@@ -29,13 +30,16 @@ const routes = [
 ];
 
 // todo : kalo bagian dipilih maka sidebar nutup
-export const Sidebar = () => {
+export const Sidebar = ({ className }: { className?: string }) => {
   const pathname = usePathname();
 
   return (
     <div
       id="sidebar"
-      className="sticky top-0 h-screen w-60 z-10 bg-black flex flex-col items-center gap-3"
+      className={twMerge(
+        "sticky top-0 h-screen min-w-60 z-10 bg-black lg:flex flex-col items-center gap-3",
+        className
+      )}
     >
       <div
         id="sidebar-header"

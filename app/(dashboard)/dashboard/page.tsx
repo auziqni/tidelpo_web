@@ -1,5 +1,5 @@
 import Map from "@/components/dashboard/map";
-import React from "react";
+import React, { Suspense } from "react";
 // import datamock from "@/lib/mock/alatMock.json";
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
@@ -27,7 +27,7 @@ async function getTiang() {
   });
 
   const dataPenyesuaian = tiang.map((item, index) => ({
-    id: index + 1,
+    id: Number(item.id),
     deviceCode: item.deviceCode,
     nama: item.nama,
     lat: item.lat,
@@ -46,8 +46,9 @@ export default async function Dashboard() {
   const dataTiang: DataMap[] = await getTiang();
   return (
     <div className="relative">
-      <Map dataMap={dataTiang} />
-      {/* <div className="h-full w-full bg-red-200"></div> */}
+      <Suspense fallback={<div>Loading Map...</div>}>
+        <Map dataMap={dataTiang} />
+      </Suspense>
     </div>
   );
 }

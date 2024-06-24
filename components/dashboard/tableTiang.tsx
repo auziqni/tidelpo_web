@@ -89,7 +89,10 @@ export default function TableTiang({ data }: { data: DataTiang[] }) {
     enableStickyHeader: true,
     enableStickyFooter: true,
     muiTableContainerProps: { sx: { maxHeight: "580px" } },
-    initialState: { pagination: { pageSize: 25, pageIndex: 0 } },
+    initialState: {
+      pagination: { pageSize: 25, pageIndex: 0 },
+      sorting: [{ id: "id", desc: false }],
+    },
 
     renderTopToolbarCustomActions: ({ table }) => (
       <Box

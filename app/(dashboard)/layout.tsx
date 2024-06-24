@@ -14,7 +14,7 @@ const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
     // </div>
     //
     <main className="flex relative">
-      <Sidebar />
+      <Sidebar className="hidden lg:flex" />
       <div className=" flex flex-col w-full  overflow-clip">
         <Navbar />
         <div className="relative">{children}</div>
