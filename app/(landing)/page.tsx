@@ -34,10 +34,8 @@ export default function Home() {
     <div className="relative ">
       <div id="hero" className="h-screen relative">
         <div className="absolute bottom-1/2 z-10 pl-20 text-white">
-          <h3 className="text-xl font-slackey">
-            Cermati Alur Dari Hulu Ke Hilir
-          </h3>
-          <h1 className=" text-5xl font-overlock font-black">
+          <h3 className="text-xl ">Cermati Alur Dari Hulu Ke Hilir</h3>
+          <h1 className=" text-5xl  font-black">
             Monitor Tiang Listrik dengan Mudah dan Efisien
           </h1>
         </div>
@@ -52,7 +50,7 @@ export default function Home() {
       </div>
 
       <div id="layanan" className="flex flex-col  items-center mt-20 gap-10">
-        <h2 className="font-slackey text-4xl">Layanan</h2>
+        <h2 className=" font-bold text-4xl">Layanan</h2>
         <div className=" flex gap-5 ">
           {cardLayanan.map((card, index) => (
             <CardLayanan key={index} {...card} />
@@ -74,7 +72,7 @@ export default function Home() {
           />
         </div>
         <div className=" w-2/5 h-[503px] mt-10">
-          <h2 className="font-slackey text-4xl mb-10">TENTANG KAMI</h2>
+          <h2 className="font-bold text-4xl mb-10">TENTANG KAMI</h2>
           <p>
             {" "}
             Alat IoT Monitoring Tiang Listrik kami adalah solusi canggih dan

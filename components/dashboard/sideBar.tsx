@@ -45,14 +45,16 @@ export const Sidebar = ({ className }: { className?: string }) => {
         id="sidebar-header"
         className="w-[90%] h-48 bg-[#000000]  border-b-2 border-slate-400 relative"
       >
-        <Image
-          src={`/logo.png`}
-          alt="Next.js logo"
-          fill
-          style={{ objectFit: "contain" }}
-          priority
-          className="transform scale-75"
-        />
+        <Link href="/">
+          <Image
+            src={`/logo.png`}
+            alt="Next.js logo"
+            fill
+            style={{ objectFit: "contain" }}
+            priority
+            className="transform scale-75"
+          />
+        </Link>
       </div>
       <div id="sidebar-content" className=" w-[90%] bg-black">
         {routes.map((route) => (
