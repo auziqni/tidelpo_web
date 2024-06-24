@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tidelpo
 
-## Getting Started
+Alat IoT Monitoring Tiang Listrik kami adalah solusi canggih dan terintegrasi yang dirancang untuk memastikan keamanan dan stabilitas tiang listrik Anda. Dengan teknologi monitoring real-time, alat ini memantau berbagai parameter penting seperti kemiringan tiang, lokasi, kelembaban tanah, dan tekanan udara di sekitar tiang listrik.
 
-First, run the development server:
+## Penggunaaan
+
+### instalasi
+
+#### pembantu utama
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm dlx shadcn-ui@latest init
+pnpm i tailwind-merge
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### prisma
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+pnpm install prisma @prisma/client @prisma/studio
+pnpm add -g dotenv-cli
+npx prisma init
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+##### runnig prisma
 
-## Learn More
+```
+npx prisma generate
+npx prisma db push
+npx prisma studio
 
-To learn more about Next.js, take a look at the following resources:
+"monitor": "dotenv -e .env.development -- npx prisma studio"
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### addon shadcn
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+pnpm dlx shadcn-ui@latest add button
+pnpm dlx shadcn-ui@latest add sheet
 
-## Deploy on Vercel
+pnpm dlx shadcn-ui@latest add command popover
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+```
+
+#### map
+
+```
+pnpm i @react-google-maps/api
+```
+
+#### table
+
+```
+pnpm add material-react-table @mui/material @mui/x-date-pickers @mui/icons-material @emotion/react @emotion/styled
+pnpm i export-to-csv
+
+```
+
+#### auth clerk
+
+```
+pnpnpm add @clerk/nextjs
+```
