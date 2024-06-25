@@ -1,8 +1,11 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useUser } from "@clerk/nextjs";
 
 export default function Navbar() {
+  const { isSignedIn, user, isLoaded } = useUser();
   return (
     <nav className="relative h-[80px] bg-black flex items-center justify-between px-14">
       <div id="logo" className="h-[55px] w-[213px] relative  ">
@@ -28,15 +31,18 @@ export default function Navbar() {
           <li>
             <a href="#tentang">Hubungi Kami</a>
           </li>
-          <li>
-            <a href="/sign-up">Daftar</a>
-          </li>
+          {!isSignedIn && (
+            <li>
+              <a href="/sign-up">Daftar</a>
+            </li>
+          )}
+
           <li>
             <Link
               href={"/sign-in"}
               className="text-black py-3 px-7 bg-accentyellow rounded-sm"
             >
-              Masuk
+              {isSignedIn ? "Dashboard" : "Masuk"}
             </Link>
           </li>
         </ul>
