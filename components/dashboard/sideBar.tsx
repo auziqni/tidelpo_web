@@ -23,12 +23,6 @@ const routes = [
     color: "text-violet-500",
   },
   {
-    label: "RealTime",
-    icon: ArrowDownUp,
-    href: "/realtime",
-    color: "text-amber-500",
-  },
-  {
     label: "Setting",
     icon: Settings,
     href: "/setting",
