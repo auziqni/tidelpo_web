@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { MapIcon, LayoutDashboard, Settings } from "lucide-react";
+import { MapIcon, LayoutDashboard, ArrowDownUp, Settings } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
