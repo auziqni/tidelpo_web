@@ -68,7 +68,7 @@ export default function Home() {
       >
         <div className=" w-2/5 h-[503px] relative">
           <Image
-            src={`${process.env.NEXT_PUBLIC_MEDIA_URL}landing%2Fabout.png`}
+            src={"https://tidelpo.auziqni.com/landing/alattidelpo.jpg"}
             alt="Next.js logo"
             fill
             style={{ objectFit: "contain" }}
