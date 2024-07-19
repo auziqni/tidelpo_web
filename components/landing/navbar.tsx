@@ -8,13 +8,12 @@ export default function Navbar() {
   const { isSignedIn, user, isLoaded } = useUser();
   return (
     <nav className="relative h-[80px] bg-black flex items-center justify-between px-14">
-      <div id="logo" className="h-[55px] w-[213px] relative  ">
+      <div id="logo" className="h-[55px] w-[213px] relative pl-10">
         <Image
           src={`/logo.png`}
           alt="Next.js logo"
-          //   height={55}
-          //   width={213}
-          fill
+          height={55}
+          width={350}
           style={{ objectFit: "contain" }}
           priority
         />

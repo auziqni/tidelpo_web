@@ -15,17 +15,17 @@ const cardLayanan: CardLayananProps[] = [
   {
     url: "/icon/tilt.png",
     title: "Kemiringan",
-    description: "Pemantauan lokasi yang akurat menggunkana saltelit",
+    description: "Pemantauan kemiringan tiang listrik secara akurat",
   },
   {
     url: "/icon/pressure.png",
     title: "Tekanan Udara ",
-    description: "Pemantauan lokasi yang akurat menggunkana saltelit",
+    description: "Pemantauan tekanan udara  secara akurat",
   },
   {
     url: "/icon/humidity.png",
     title: "Kelembaban Tanah",
-    description: "Pemantauan lokasi yang akurat menggunkana saltelit",
+    description: "Pemantauan kelembaban tanah  secara akurat",
   },
 ];
 
@@ -71,25 +71,34 @@ export default function Home() {
             className=""
           />
         </div>
-        <div className=" w-2/5 h-[503px] mt-10">
-          <h2 className="font-bold text-4xl mb-10">TENTANG KAMI</h2>
-          <p>
-            {" "}
-            Alat IoT Monitoring Tiang Listrik kami adalah solusi canggih dan
-            terintegrasi yang dirancang untuk memastikan keamanan dan stabilitas
-            tiang listrik Anda. Dengan teknologi monitoring real-time, alat ini
-            memantau berbagai parameter penting seperti kemiringan tiang,
-            lokasi, kelembaban tanah, dan tekanan udara di sekitar tiang
-            listrik.
+        <div className=" w-2/5 h-[503px] my-10 ">
+          <h2 className="font-bold text-4xl mb-5 ">TENTANG KAMI</h2>
+          <p className=" text-justify">
+            TIDELPO adalah solusi inovatif dalam dunia Internet of Things (IoT)
+            yang dirancang khusus untuk memantau kemiringan tiang listrik.
+            Dengan menggabungkan teknologi canggih, TIDELPO memberikan kontrol
+            penuh dan infirmasi real-time untuk memastikan keadaan aman tiang
+            listrik. Ini adalah langkah maju dalam memastikan efisiennya
+            penyaluran listrik dan kemanan lingkungan dari bahaya miringnya
+            tiang listrik.
+          </p>
+          <p className=" text-justify">
+            TIDELPO hadir dengan fitur canggih untuk memantau kemiringan tiang
+            listrik secara akurat. Sensor yang sensitif dan sistem analitik ya
+            cerdas mendeteksi parameter penting, seperti derajat kemiringan,
+            tekanan udara, dan kelembapan tanah. Ketika parameter-parameter ini
+            berada diluar kisaran yang aman, TIDELPO akan memberikan informasi
+            kepada pemilik, memungkinkan tindakan cepat untuk melakukan
+            perbaikan sebelum tiang listrik semakin miring.
           </p>
           <div className="grid grid-cols-2 px-10 mt-10">
             <div className="col-span-1">
-              <h3>Tim</h3>
-              <p>nama 1</p>
-              <p>nama 2</p>
+              <h3 className="font-bold">Tim</h3>
+              <p className="hover:text-yellow-600">Frikles Lumbantoruan</p>
+              <p className="hover:text-yellow-600">Melfini Tamba</p>
             </div>
             <div className="col-span-1">
-              <h3>alamat</h3>
+              <h3 className="font-bold">alamat</h3>
               <p>
                 Alamat Jl. Terusan Ryacudu, Way Huwi, Kec. Jati Agung, Kabupaten
                 Lampung Selatan, Lampung 35365
@@ -104,10 +113,12 @@ export default function Home() {
 
 function CardLayanan({ url, title, description }: CardLayananProps) {
   return (
-    <div className="bg-white rounded-lg shadow-lg p-4 w-[244px] h-[330px]">
+    <div className="bg-white rounded-lg shadow-lg p-4 w-[244px] h-[330px] flex flex-col gap-8 items-center">
       <Image src={url} alt={title} width={120} height={120} />
-      <h3 className="text-2xl">{title}</h3>
-      <p>{description}</p>
+      <div className="flex flex-col gap-1 items-center">
+        <h3 className="text-xl text-center font-semibold">{title}</h3>
+        <p className=" text-center">{description}</p>
+      </div>
     </div>
   );
 }

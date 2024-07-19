@@ -1,6 +1,7 @@
 import Map from "@/components/dashboard/map";
 import React, { Suspense } from "react";
 // import datamock from "@/lib/mock/alatMock.json";
+// import { PrismaClient } from "@prisma/client";
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
