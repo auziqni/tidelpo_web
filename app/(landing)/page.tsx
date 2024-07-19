@@ -33,11 +33,15 @@ export default function Home() {
   return (
     <div className="relative ">
       <div id="hero" className="h-screen relative">
-        <div className="absolute bottom-1/2 z-10 pl-20 text-white">
+        {/* <div className="absolute bottom-1/2 z-10 pl-20 text-white">
           <h3 className="text-xl ">Cermati Alur Dari Hulu Ke Hilir</h3>
           <h1 className=" text-5xl  font-black">
             Monitor Tiang Listrik dengan Mudah dan Efisien
           </h1>
+        </div> */}
+        <div className="absolute bottom-1/2 z-10 pl-20 text-white  text-5xl  font-black flex flex-col gap-3">
+          <h1 className="">TILT DETECTION of POLE</h1>
+          <h1 className="">(DETEKSI KEMIRINGAN TIANG LISTRIK)</h1>
         </div>
         <Image
           src={`${process.env.NEXT_PUBLIC_MEDIA_URL}landing%2Fhero.jpg`}
