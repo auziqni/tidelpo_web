@@ -47,7 +47,7 @@ export const Sidebar = ({ className }: { className?: string }) => {
       >
         <Link href="/">
           <Image
-            src={`/logo.png`}
+            src={`/newlogo.png`}
             alt="Next.js logo"
             fill
             style={{ objectFit: "contain" }}
