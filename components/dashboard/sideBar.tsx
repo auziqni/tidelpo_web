@@ -17,7 +17,7 @@ const routes = [
     color: "text-sky-500",
   },
   {
-    label: "Tabel",
+    label: "Data",
     icon: MapIcon,
     href: "/tabel",
     color: "text-violet-500",

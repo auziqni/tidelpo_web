@@ -83,12 +83,12 @@ export default function Home() {
             Dengan menggabungkan teknologi canggih, TIDELPO memberikan kontrol
             penuh dan infirmasi real-time untuk memastikan keadaan aman tiang
             listrik. Ini adalah langkah maju dalam memastikan efisiennya
-            penyaluran listrik dan kemanan lingkungan dari bahaya miringnya
+            penyaluran listrik dan keamanan lingkungan dari bahaya miringnya
             tiang listrik.
           </p>
           <p className=" text-justify">
             TIDELPO hadir dengan fitur canggih untuk memantau kemiringan tiang
-            listrik secara akurat. Sensor yang sensitif dan sistem analitik ya
+            listrik secara akurat. Sensor yang sensitif dan sistem analitik yang
             cerdas mendeteksi parameter penting, seperti derajat kemiringan,
             tekanan udara, dan kelembapan tanah. Ketika parameter-parameter ini
             berada diluar kisaran yang aman, TIDELPO akan memberikan informasi
@@ -100,6 +100,7 @@ export default function Home() {
               <h3 className="font-bold">Tim</h3>
               <p className="hover:text-yellow-600">Frikles Lumbantoruan</p>
               <p className="hover:text-yellow-600">Melfini Tamba</p>
+              <p className="hover:text-yellow-600">082183401772</p>
             </div>
             <div className="col-span-1">
               <h3 className="font-bold">alamat</h3>
